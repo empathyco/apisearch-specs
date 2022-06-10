@@ -12,7 +12,7 @@ window.addEventListener("message", function(event) {
 }
 ```
 
-Device values can be "desktop", "phone" and "tablet".
+Device values can be <code>desktop</code>, <code>phone</code> and <code>tablet</code>.
 
 ### apisearch_search
 
