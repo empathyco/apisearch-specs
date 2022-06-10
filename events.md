@@ -32,6 +32,7 @@ When the search layer renders new items, this event is dispatched with these ite
 {
   name: "apisearch_result_items",
   query: Query,
+  query_text: string,
   with_results: boolean,
   page: integer,
   items: Item[]
