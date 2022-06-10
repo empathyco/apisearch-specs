@@ -20,7 +20,9 @@ Each time a new search is computed, this event is thrown. This event is not exac
 {
   name: "apisearch_search",
   query_text: string,
-  query: Query
+  query: Query,
+  device: string,
+  site: string
 {
 ```
 
@@ -35,7 +37,9 @@ When the search layer renders new items, this event is dispatched with these ite
   query_text: string,
   with_results: boolean,
   page: integer,
-  items: Item[]
+  items: array[],
+  device: string,
+  site: string
 {
 ```
 
@@ -47,10 +51,10 @@ Each time an item is clicked and notified to our servers.
 {
   name: "apisearch_item_was_clicked",
   item_id: string,
-  site: string,
+  query: array,
+  result: array,
   device: string,
-  query: Query,
-  result: Result
+  site: string
 }
 ```
 
@@ -62,10 +66,10 @@ Each time an items is interacted and notified to our servers. When an items is c
 {
   name: "apisearch_item_was_interacted",
   item_id: string,
-  site: string,
+  query: array,
+  result: array,
   device: string,
-  query: Query,
-  result: Result
+  site: string
 }
 ```
 
