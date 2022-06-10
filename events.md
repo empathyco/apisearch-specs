@@ -18,9 +18,9 @@ Each time a new search is computed, this event is thrown. This event is not exac
 
 ```javascript
 {
-  name: "apisearch_purchase_was_done",
-  site: "site1",
-  device: "tablet"
+  name: "apisearch_search",
+  query_text: string,
+  query: Query
 {
 ```
 
