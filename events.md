@@ -12,6 +12,8 @@ window.addEventListener("message", function(event) {
 }
 ```
 
+Device values can be "desktop", "phone" and "tablet".
+
 ### apisearch_search
 
 Each time a new search is computed, this event is thrown. This event is not exactly the used one in our servers, as we work with complex graph algorithms to ensure that searches are built properly, discarding all intermediate and useless words. In this case, we consider a new word when the final user stops typing during 2 seconds. Then, the current word is considered a search
