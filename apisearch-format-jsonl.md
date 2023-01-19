@@ -29,6 +29,17 @@ This is the Apisearch item structure.
 }
 ```
 
+All values can have one or several elements. For example, you could provide a list of same-level categories by doing this```json
+
+```json
+{
+    "id": "ID",
+    "c": ["category1", "category2", "categoryN"],
+}
+```
+
+> Diferent level categories are meant for different filters. Same filter values means same field.
+
 For multisite, you can work with both sites and languages. A site can hold a
 language, and a language can be held by multiple sites. Fields `ID`,`title`,
 `url` and `image` are required. Site and language names have no standard,
@@ -103,3 +114,9 @@ sizes.
 
 The feed will be served in [`JSONL`](https://jsonlines.org) format. As simple as
 a file when you write a json representation of an item. Important. Each line must represent one item. This means that break lines must be encoded.
+
+```jsonl
+{"id": "ID1", "ti": "Title1"}
+{"id": "ID2", "ti": "Title2"}
+{"id": "ID3", "ti": "Title3"}
+```
