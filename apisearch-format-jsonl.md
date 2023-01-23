@@ -112,6 +112,14 @@ sizes.
 }
 ```
 
+Deletions must be specified here as well by using the same format, but with a specific flag instead of the whole item body. Lines can be mixed.
+
+```jsonl
+{"id": "ID1", "delete": true}
+{"id": "ID2", "delete": true}
+{"id": "ID3", "delete": true}
+```
+
 The feed will be served in [`JSONL`](https://jsonlines.org) format. As simple as
 a file when you write a json representation of an item. Important. Each line must represent one item. This means that break lines must be encoded.
 
