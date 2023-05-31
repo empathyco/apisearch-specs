@@ -10,6 +10,7 @@ This is the Apisearch item structure.
     "op": "Old price, 13.47 (float)",
     "p_c": "Price with currency, 9.34€ (string)",
     "op_c": "Price with currency, 13.47€ (string)",
+    "av": "Product is available (bool)",
     "e": "Ean",
     "sku": "Sku",
     "u": "Url",
