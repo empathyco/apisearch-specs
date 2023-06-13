@@ -24,7 +24,9 @@ This is the Apisearch item structure.
     "c3": "Category level 3",
     "c4": "Category level 4",
     "c5": "Category level 5",
-    "o": "Options",
+    "opt": "Options",
+    "s": "Sales (integer)",
+    "pr": "Priority 1-10"
     "rs": "Review stars (integer)",
     "rc": "Number of reviews (integer)"
 }
@@ -40,6 +42,11 @@ All values can have one or several elements. For example, you could provide a li
 ```
 
 > Diferent level categories are meant for different filters. Same filter values means same field.
+
+Here some explanation about some fields
+
+- Sales (s) is a normalized representation of your sales. Normalization means that should be a value between 0 and 1000, for example, where 1000 is the most sold item. This number can be changed in order to obfuscate the real number.
+- Priority (pr) is a normalized representation of the priority of your product. Most important products for abstract queries should have higher values here.
 
 For multisite, you can work with both sites and languages. A site can hold a
 language, and a language can be held by multiple sites. Fields `ID`,`title`,
