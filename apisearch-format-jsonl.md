@@ -124,6 +124,8 @@ sizes.
 }
 ```
 
+## Deletion lines
+
 Deletions must be specified here as well by using the same format, but with a specific flag instead of the whole item body. Lines can be mixed.
 
 ```jsonl
