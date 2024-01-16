@@ -134,8 +134,9 @@ Deletions must be specified here as well by using the same format, but with a sp
 {"id": "ID3", "delete": true}
 ```
 
-The feed will be served in [`JSONL`](https://jsonlines.org) format. As simple as
-a file when you write a json representation of an item. Important. Each line must represent one item. This means that break lines must be encoded.
+## Output format (JSONL)
+
+The feed will be served in [`JSONL`](https://jsonlines.org) format. Each line must represent one item formated as JSON. Each line **must ends with a break line**. This means that break lines inside the content, like titles or descriptions, must be deleted.
 
 ```jsonl
 {"id": "ID1", "ti": "Title1"}
