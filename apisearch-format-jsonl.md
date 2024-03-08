@@ -139,14 +139,14 @@ You can assign a different price for each of your user groups. The default price
             "p": 10,
             "pc": "10 EUR",
             "op": "15",
-            "opc": "15 EUR,
+            "opc": "15 EUR",
             "av": true,
         },
         "group_2": {
             "p": 13,
             "pc": "13 EUR",
             "op": "19",
-            "opc": "19 EUR,
+            "opc": "19 EUR",
             "av": true
         },
         "group_3": {
