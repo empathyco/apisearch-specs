@@ -1,6 +1,6 @@
 # Custom Prices Endpoint Specification
 
-This document outlines the specification for a **Custom Prices Strategy** within Apisearch. A custom prices strategy is required when Apisearch receives a page of results, and due to the complexity of pricing (e.g., customer-specific prices or advanced pricing calculations), an intermediate server-side call is needed before displaying final product prices.
+This document outlines the specification for a **Custom Prices Strategy** within Apisearch. A custom prices strategy is required when Apisearch receives a page of results, and due to the complexity of pricing (e.g., customer-specific prices or advanced pricing calculations), an intermediate server-side call is needed before displaying final product prices. This call is done by the client's browser; than means that will carry the user session in order to find specific prices. A better explanation will be placed at the end of this document.
 
 By following this specification, the custom prices strategy can be seamlessly integrated with Apisearch, enabling dynamic and flexible pricing for complex use cases.
 
@@ -78,5 +78,9 @@ Each product object includes the following fields:
 * **Optional Fields**
   Fields `op`, `op_c`, and `dp` are included only for products with an active discount (`wd` set to `true`).
 
+## Implementation strategy
+
+This endpoint must be designed to return specific prices for a particular user. To achieve this, each client must access the user’s session in the same way it is done in the rest of the online store. There is no rule for this, since in each case it is handled in a completely different way. Given that the implementation of this endpoint will be carried out 100% of the time by a technical department, it is assumed that each store will know how to retrieve the customer-specific price.
+
 > [!WARNING]  
-> Any delay in this endpoint could negatively impact page load times and user experience.
+> Any delay in this endpoint could negatively impact page load times and user experience. Ensure that the endpoint is as fast as possible.
