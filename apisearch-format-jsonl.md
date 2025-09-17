@@ -146,3 +146,15 @@ The feed will be served in [`JSONL`](https://jsonlines.org) format. Each line mu
 {"id": "ID2", "ti": "Title2"}
 {"id": "ID3", "ti": "Title3"}
 ```
+
+### Alternative format (JSON)
+
+If JSONL is not an option, feeds can be sent as well in JSON format, as an array of items. JSONL is preferred.
+
+```json
+[
+    {"id": "ID1", "ti": "Title1"},
+    {"id": "ID2", "ti": "Title2"},
+    {"id": "ID3", "ti": "Title3"}
+]
+```
