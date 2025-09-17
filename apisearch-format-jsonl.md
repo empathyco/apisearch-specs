@@ -50,6 +50,8 @@ Here some explanation about some fields
 - Sales (s) is a normalized representation of your sales. Normalization means that should be a value between 0 and 1000, for example, where 1000 is the most sold item. This number can be changed in order to obfuscate the real number.
 - Priority (pr) is a normalized representation of the priority of your product. Most important products for abstract queries should have higher values here.
 
+> Feed must be provided as URL. Sending a simple document will not work. Only URL accessible from internet
+
 ## Multisite feed
 
 For multisite, you can work with both sites and languages. A site can hold a
