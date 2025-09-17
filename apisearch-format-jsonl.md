@@ -124,50 +124,6 @@ sizes.
 }
 ```
 
-## B2B prices per group
-
-You can assign a different price for each of your user groups. The default prices in the root of the item will still be used if, on search time, the group is not found.
-
-```json
-{
-    "id": "ID",
-    "ti": "Title",
-    "u": "Url",
-    "i": "Image",
-    "users": {
-        "group_1": {
-            "p": 10,
-            "pc": "10 EUR",
-            "op": "15",
-            "opc": "15 EUR",
-            "av": true,
-        },
-        "group_2": {
-            "p": 13,
-            "pc": "13 EUR",
-            "op": "19",
-            "opc": "19 EUR",
-            "av": true
-        },
-        "group_3": {
-            "av": false
-        }
-    }
-}
-```
-
-Inside each group you can find all prices data. By default, available is `true` even if the group is not defined. If the group is defined with the availability boolean as `false`, then this object will not be found per this group.
-
-```json
-{
-    "p": "Price, 9.34 (float)",
-    "op": "Old price, 13.47 (float)",
-    "p_c": "Price with currency, 9.34€ (string)",
-    "op_c": "Price with currency, 13.47€ (string)",
-    "av": "Product is available for this group (bool)",
-}
-```
-
 
 ## Deletion lines
 
